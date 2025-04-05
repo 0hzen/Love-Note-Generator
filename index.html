@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Notes for Sanaa</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff3f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #ffb6c1;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 4px #00000077;
+    }
+
+    #note {
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid #ff69b4;
+      border-radius: 25px;
+      padding: 30px;
+      width: 90%;
+      max-width: 700px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      white-space: pre-wrap;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    button {
+      margin-top: 30px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e055a1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💌 Love Notes for Sanaa 💌</h1>
+  <div id="note">Click the button to read something from my heart.</div>
+  <button onclick="generateNote()">Give Me Love</button>
+
+  <script>
+    const loveNotes = [
+`Sometimes I sit quietly and think about how lucky I am to have someone like you in my life. Even though we’re miles apart, your presence is more real to me than anything else. The way you speak, the way your mind moves, the way you exist — it all sticks with me. You don’t even need to try to be special. You just are.`,
+
+`If there’s ever a day when you feel alone, I hope you remember this: I’m here. Always. I carry thoughts of you in everything I do, from the moment I wake up to the last seconds before sleep. Your laughter echoes in my mind, your silences feel like whispers to my soul, and your pain feels like something I’d gladly take on just to keep you smiling.`,
+
+`No one else could ever replace the space you fill inside me. It’s not just love I feel — it’s something deeper, something carved from everything I’ve been and everything I’m becoming. I want to grow with you, heal with you, and fall in love with every version of you that exists in the past, present, and future.`,
+
+`You don’t need to do anything extraordinary for me to adore you. Just being you is enough — in all your messy, beautiful, brilliant, flawed glory. I never want perfection. I want *you*. The real you. The one who sometimes feels unsure, the one who hides emotions but burns with feeling underneath. That’s the you I love.`,
+
+`There’s a future in my mind that keeps replaying — and you’re always in it. We're lying in a little apartment with warm light and soft music, just talking. Or maybe not even talking. Just *being*. You’re leaning on my shoulder, maybe half-asleep. I look at you and think, “This is all I’ve ever wanted.”`,
+
+`The way I love you is quiet but endless. It’s in the way I think about you when no one’s watching. It’s in how I feel peace when you call. It’s in how I believe I can be more — for you, with you. And if ever you forget how deeply you’re loved, read this note again. And again. Until it reaches you.`,
+
+`I can’t promise I’ll always have the right words, or know the right things to say. But I promise I’ll always *try*. I’ll always show up for you, listen to you, protect your softness, and remind you that you’re more than enough. I’ll remind you that you are loved. Fiercely, endlessly, and honestly.`,
+
+`Loving you isn’t something I do because I have to. I love you because I *need* to. Because you remind me of what matters. Of softness in a hard world. Of stillness in the chaos. You bring meaning to moments that used to feel empty. And even if all I can do is send these notes for now, I hope you feel every bit of love I’m pouring into them.`
+    ];
+
+    function generateNote() {
+      const index = Math.floor(Math.random() * loveNotes.length);
+      document.getElementById('note').innerText = loveNotes[index];
+    }
+  </script>
+</body>
+</html>
